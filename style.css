@@ -1,0 +1,122 @@
+/* Styles généraux */
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Empêche le défilement horizontal lorsque la barre de navigation est pliée */
+}
+
+.background-image {
+    background-image: url('images/n.jpg'); /* Remplacez 'votre_image_de_fond.jpg' par le chemin de votre image de fond */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+}
+
+.image-container {
+    max-width: 50%; /* Limite la largeur maximale de l'image à 50% de la largeur du conteneur */
+    height: auto; /* Pour conserver le ratio hauteur/largeur */
+    display: block; /* Pour centrer l'image horizontalement */
+    margin-left: 5px; /* Décalage vers la gauche */
+    margin-right: 3px; /* Réduire l'espacement entre l'image et le texte */
+    z-index: 0;
+}
+
+.image-container.shifted {
+    transform: translateX(150px); /* Décale l'image vers la droite */
+}
+
+.image-container img {
+    border-radius: 20px; /* Arrondit les coins de l'image */
+}
+
+
+.text-container {
+    text-align: center; /* Centrer le texte horizontalement */
+    width: 100%; /* Pour occuper toute la largeur du conteneur */
+    margin-right: 50px; /* Réduire l'espacement entre le texte et l'image */
+    margin-left: 3px; /* Réduire l'espacement entre le texte et l'image */
+}
+
+.text-container {
+    display: flex;
+    align-items: center; /* Pour centrer verticalement les textes */
+}
+
+.text-left, .text-right {
+    flex: 1; /* Pour répartir l'espace disponible entre les deux textes */
+    margin: 0; /* Réinitialiser les marges */
+    margin-right: 5px;
+}
+
+.text-right {
+    margin-left: 50px; /* Augmenter l'espacement entre les deux textes */
+}
+
+
+.overlay-image {
+    max-width: 50%; /* Pour limiter la largeur de l'image à 50% de la largeur du conteneur */
+    height: auto; /* Pour conserver le ratio hauteur/largeur */
+    display: block; /* Pour centrer l'image horizontalement */
+    margin: 0 auto; /* Pour centrer l'image horizontalement */
+    position: relative; /* Ajout de cette propriété pour que l'image soit positionnée par rapport à son conteneur */
+    z-index: 1; /* Pour placer l'image au-dessus de l'image de fond */
+}
+
+.menu-btn {
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 999; /* Assure que le bouton de menu est au-dessus de tout */
+}
+
+.navbar {
+    background-color: #333;
+    color: black;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Masquer la barre de navigation au chargement */
+    transition: left 0.3s; /* Animation de transition */
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px; /* Ajouter de l'espace pour le bouton de menu */
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.me {
+    width: 100%;
+    height: 100%;
+}
+
+.skills {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.softskills {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
